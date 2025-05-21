@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Voca Check</title>
+  <link rel="stylesheet" href="voca.css">
+</head>
+<body>
+  <div id="wrap">
+    <div id="title">영어단어 반복</div>
+  <table id="vocaSel">
+    <tr>
+      <td colspan="3" class="sel">시작단어선택</td>
+      <td colspan="3" class="sel">마지막단어선택</td>
+    </tr>
+    <tr>
+      <td rowspan="2" class="stend1">1</td>
+      <td class="upd"><button onclick="sup1()">▲</button> 1단위</td>
+      <td class="upd"><button onclick="sup10()">▲</button> 10단위</td>
+      <td rowspan="2" class="stend2">2</td>
+      <td class="upd"><button onclick="lup1()">▲</button> 1단위</td>
+      <td class="upd"><button onclick="lup10()">▲</button> 10단위</td>
+      </tr>
+    <tr>
+      <td class="upd"><button onclick="sdown1()">▼</button> 1단위</td>
+      <td class="upd"><button onclick="sdown10()">▼</button> 10단위</td>
+      <td class="upd"><button onclick="ldown1()">▼</button> 1단위</td>
+      <td class="upd"><button onclick="ldown10()">▼</button> 10단위</td>
+    </tr>
+  </table>
+
+    <!-- 헤더 영역 -->
+    <div id="header">
+      <div>번호</div>
+      <div>단어</div>
+      <div>발음</div>
+      <div>뜻</div>
+    </div>
+    
+    <!-- 콘텐츠 영역 -->
+    <div id="content">
+      <!-- 왼쪽 번호 영역 -->
+      <div class="left-column">1</div>
+      
+      <!-- 오른쪽 콘텐츠 영역 -->
+      <div id="right-column">
+        <!-- 첫 번째 행: 3개 셀 -->
+        <div class="row row-1">
+          <div class="voca1">영어단어1</div>
+          <div class="voca2">영어단어2</div>
+          <div class="voca3">영어단어3</div>
+        </div>
+        
+        <!-- 두 번째 행: 4개 셀 -->
+        <div class="row row-2">
+          <div class="cell"><input type="text" class="cell-input"></div>
+          <div class="cell"><input type="text" class="cell-input"></div>
+          <div class="cell"><input type="text" class="cell-input"></div>
+          <div class="cell"><input type="text" class="cell-input"></div>
+        </div>
+        
+        <!-- 필요한 만큼 행 추가 -->
+        <div class="row row-2">
+          <div class="cell"><input type="text" class="cell-input"></div>
+          <div class="cell"><input type="text" class="cell-input"></div>
+          <div class="cell"><input type="text" class="cell-input"></div>
+          <div class="cell"><input type="text" class="cell-input"></div>
+        </div>
+
+        <div class="row row-3">
+          <div class="cell"><input type="text" class="cell-input"></div>
+          <div class="cell"><input type="text" class="cell-input"></div>
+          <div class="cell"><input type="text" class="cell-input1"></div>
+        </div>
+
+      </div>
+    </div>
+      <div id="pagination-controls" style="text-align: center; margin: 20px 0; display: flex; justify-content: center; align-items: center; gap: 5px;">
+  <button id="firstPageBtn" style="padding: 5px 10px;">&lt;&lt;</button> <button id="prevPageBtn" style="padding: 5px 10px;">이전</button>
+  <span id="pageNumbersContainer" style="margin: 0 10px;">
+    </span>
+  <button id="nextPageBtn" style="padding: 5px 10px;">다음</button>
+  <button id="lastPageBtn" style="padding: 5px 10px;">&gt;&gt;</button> </div>
+  <div style="text-align: center; font-size: 0.9em; color: #555;">
+  Page <span id="currentPageDisplay">1</span> of <span id="totalPagesDisplay">1</span>
+  (총 <span id="totalItemsDisplay">0</span>개 단어 중) </div>
+</div>
+  </div>
+
+  <audio id="correctSound" src="answer.wav" preload="auto"></audio>
+  <audio id="incorrectSound" src="wrong.wav" preload="auto"></audio>
+
+  <script src="voca.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+    @font-face {
+      font-family: 'MyHiMelody'; 
+      src: url('Fonts/HiMelody-Regular.ttf') format('truetype');
+    }
+
+    body {
+      font-family: 'MyHiMelody'; 
+
+    }
+
+    #title {
+      font-family: 'MyHiMelody';
+      font-size: 60px; 
+      text-align: center;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      color: #4a4a4a; 
+    }
+
+    .custom-font-text {
+      font-family: 'MyHiMelody';
+    }
+
+    #wrap {
+      width: 950px;
+      margin: auto;
+    }
+    
+    #vocaSel {
+     width: 600px;
+    }
+    .sel {
+      text-align: center;
+    }
+
+    .stend1 , .stend2 {
+      width: 60px;
+      border: 1px solid brown;
+      border-collapse: collapse;
+      text-align: center;
+      color: brown;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .upd {
+      width: 120px;
+      border: 1px solid brown;
+      border-collapse: collapse;
+      text-align: center;
+      color: brown;
+    }
+
+    #header {
+      display: grid;
+      grid-template-columns: 50px 300px 300px 300px;
+      width: 950px;
+      text-align: center;
+      background-color: burlywood;
+      font-size: 24px;
+    }
+            
+    #content {
+      display: flex;
+    }
+    
+    .left-column {
+      width: 50px;
+      background-color: wheat;
+      text-align: center;
+    }
+    
+    #right-column {
+      display: flex;
+      flex-direction: column;
+      width: 900px;
+    }
+    
+    .row {
+      display: grid;
+    }
+    
+    .row-1 {
+      grid-template-columns: repeat(3, 300px);
+      height: 60px;
+      border-collapse: collapse;
+      background-color: coral;
+    }
+        
+    .row-2 {
+      grid-template-columns: repeat(4, 225px);
+      height: 60px;
+      background-color: orange;
+    }
+
+    .row-3 {
+      grid-template-columns: 225px 225px 450px;
+      height: 60px;
+      background-color: orange;
+    }
+
+    .cell {
+      text-align: center;
+      border: 1px solid gray;
+    }
+
+    .voca1, .voca2, .voca3 {
+      text-align: center;     
+      border: 1px solid gray;
+      font-size: 30px;
+
+      display: flex;          
+      align-items: center;    
+      justify-content: center;
+
+      box-sizing: border-box;
+      padding: 5px; 
+      overflow-wrap: break-word; 
+      word-break: break-all;     
+    }
+
+    .cell-input{
+      text-align: center;
+      width: 180px;
+      margin-top: 20px;
+    }
+
+    .cell-input1{
+      text-align: center;
+      width: 400px;
+      margin-top: 20px;
+    }
+
+    .number-item {
+    min-height: 240px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd; 
+    box-sizing: border-box;
+    }
+    .left-column .number-item:last-child {
+        border-bottom: none; 
+    }
